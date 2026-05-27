@@ -22,7 +22,7 @@ function Contact() {
     try {
 
       const response = await axios.post(
-        "http://localhost:8080/api/contact",
+        "https://portfolio-backend-pp2s.onrender.com/api/contact",
         formData
       )
 

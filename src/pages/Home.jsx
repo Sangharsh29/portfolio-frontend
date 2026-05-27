@@ -1,4 +1,4 @@
-import profile from "../assets/profile.jpg"
+import profile from "../assets/profile.JPG"
 import { Link } from "react-router-dom"
 
 function Home() {
