@@ -43,7 +43,10 @@ function Contact() {
   }
 
   return (
-    <div className="min-h-screen pt-52 md:pt-40 pb-20 px-6 md:px-10 relative overflow-hidden">
+    <div
+  id="contact"
+  className="min-h-screen pt-pt-32 md:pt-28 pb-20 px-6 md:px-10 relative overflow-hidden"
+>
 
       {/* Glow Background */}
       <div className="absolute top-20 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>

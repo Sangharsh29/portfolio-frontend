@@ -18,7 +18,10 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="min-h-screen pt-52 md:pt-40 pb-20 px-6 md:px-10 relative overflow-hidden">
+    <div
+  id="projects"
+  className="min-h-screen pt-32 md:pt-28 pb-20 px-6 md:px-10 relative overflow-hidden"
+>
 
       {/* Glow Background */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>

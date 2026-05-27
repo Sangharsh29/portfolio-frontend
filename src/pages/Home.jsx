@@ -1,9 +1,11 @@
 import profile from "../assets/profile.JPG"
-import { Link } from "react-router-dom"
 
 function Home() {
   return (
-    <div className="min-h-screen relative flex items-center justify-center pt-52 md:pt-32 overflow-hidden px-6">
+    <section
+      id="home"
+      className="min-h-screen relative flex items-center justify-center pt-52 md:pt-32 overflow-hidden px-6"
+    >
 
       {/* Glow Background */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
@@ -14,7 +16,7 @@ function Home() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 md:gap-20 items-center z-10">
 
         {/* Left Side */}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left order-2 md:order-1">
 
           <p className="text-cyan-400 text-sm md:text-lg mb-5 tracking-[3px]">
             AVAILABLE FOR NEW PROJECTS
@@ -40,12 +42,16 @@ function Home() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-5 mt-10 justify-center md:justify-start">
 
-            <Link
-              to="/contact"
+            <button
+              onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }}
               className="bg-cyan-400 text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-[0_0_30px_rgba(34,211,238,0.5)] text-center"
             >
               Contact Me
-            </Link>
+            </button>
 
             <a
               href="/resume.pdf"
@@ -60,7 +66,7 @@ function Home() {
         </div>
 
         {/* Right Side */}
-        <div className="flex justify-center">
+        <div className="flex justify-center order-1 md:order-2">
 
           <div className="relative">
 
@@ -84,7 +90,7 @@ function Home() {
 
       </div>
 
-    </div>
+    </section>
   )
 }
 

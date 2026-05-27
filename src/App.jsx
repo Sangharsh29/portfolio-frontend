@@ -1,5 +1,3 @@
-import { Routes, Route } from "react-router-dom"
-
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
@@ -11,24 +9,22 @@ import Contact from "./pages/Contact"
 
 function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen overflow-x-hidden">
 
       <Navbar />
 
-      <Routes>
+      <Home />
 
-        <Route path="/" element={<Home />} />
+      <About />
 
-        <Route path="/about" element={<About />} />
+      <Skills />
 
-        <Route path="/skills" element={<Skills />} />
+      <Projects />
 
-        <Route path="/projects" element={<Projects />} />
+      <Contact />
 
-        <Route path="/contact" element={<Contact />} />
+      <Footer />
 
-      </Routes>
-        <Footer />
     </div>
   )
 }
