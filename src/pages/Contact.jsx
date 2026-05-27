@@ -45,7 +45,7 @@ function Contact() {
   return (
     <div
   id="contact"
-  className="min-h-screen pt-pt-32 md:pt-28 pb-20 px-6 md:px-10 relative overflow-hidden"
+  className=" min-h-screen pt-32 md:pt-28 pb-20 px-6 md:px-10 relative overflow-hidden"
 >
 
       {/* Glow Background */}
