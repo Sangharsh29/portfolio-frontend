@@ -1,5 +1,5 @@
 import { useState } from "react"
-import axios from "axios"
+import emailjs from "@emailjs/browser"
 
 function Contact() {
 
@@ -17,30 +17,36 @@ function Contact() {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+  e.preventDefault()
 
-    try {
+  try {
 
-      const response = await axios.post(
-        "https://portfolio-backend-pp2s.onrender.com/api/contact",
-        formData
-      )
+    await emailjs.send(
+      "service_f3od2so",
+      "template_299fzs6",
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "MfULXRaQ-HTmMgvDA"
+    )
 
-      alert(response.data)
+    alert("Message sent successfully!")
 
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      })
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    })
 
-    } catch (error) {
+  } catch (error) {
 
-      alert("Failed to send message")
+    console.error(error)
 
-      console.error(error)
-    }
+    alert("Failed to send message")
   }
+}
 
   return (
     <div
@@ -92,7 +98,7 @@ function Contact() {
                 </p>
 
                 <p className="text-gray-400 text-base md:text-lg break-all">
-                  sangharshtaksande12345@gmail.com
+                  sangharsh.techie@gmail.com
                 </p>
               </div>
 
