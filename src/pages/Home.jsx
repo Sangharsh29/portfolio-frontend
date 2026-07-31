@@ -54,7 +54,7 @@ function Home() {
             </button>
 
             <a
-              href="/resume.pdf"
+              href="resume.pdf"
               download
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-full hover:bg-cyan-400 hover:text-black transition duration-300 text-center"
             >
