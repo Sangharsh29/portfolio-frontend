@@ -1,9 +1,9 @@
 const projects = [
   {
-    title: "Employee Management System",
+    title: "Student Management System",
     tech: ["React", "Spring Boot", "MySQL"],
     description:
-      "Full stack CRUD application for managing employee records using REST APIs and MySQL database.",
+      "Full stack CRUD application for managing Student records using REST APIs and MySQL database.",
     buttons: true,
   },
 
@@ -19,9 +19,9 @@ const projects = [
 function Projects() {
   return (
     <div
-  id="projects"
-  className="min-h-screen pt-32 md:pt-28 pb-20 px-6 md:px-10 relative overflow-hidden"
->
+      id="projects"
+      className="min-h-screen pt-32 md:pt-28 pb-20 px-6 md:px-10 relative overflow-hidden"
+    >
 
       {/* Glow Background */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -99,9 +99,14 @@ function Projects() {
               {project.buttons && (
                 <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
-                  <button className="bg-cyan-400 text-black px-5 py-3 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)]">
+                  <a
+                    href="https://studentmanagementsystem-mu.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-cyan-400 text-black px-5 py-3 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)] text-center"
+                  >
                     Live Demo
-                  </button>
+                  </a>
 
                   <button className="border border-cyan-400 text-cyan-400 px-5 py-3 rounded-full hover:bg-cyan-400 hover:text-black transition duration-300">
                     GitHub
